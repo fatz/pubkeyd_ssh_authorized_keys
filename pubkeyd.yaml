@@ -1,0 +1,5 @@
+---
+baseurl: https://github.com
+pathf: "/%s.keys"
+rewrite:
+  julferts: fatz

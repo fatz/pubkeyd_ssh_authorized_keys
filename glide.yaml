@@ -1,0 +1,12 @@
+package: github.com/fatz/pubkeyd_ssh_authorized_keys
+import:
+- package: github.com/fatz/ghpubkey-go
+  subpackages:
+  - ghpubkey
+- package: github.com/spf13/viper
+  version: ~1.0.2
+testImport:
+- package: github.com/stretchr/testify
+  version: ~1.2.1
+  subpackages:
+  - assert

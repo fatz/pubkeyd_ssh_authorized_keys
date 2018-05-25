@@ -1,4 +1,4 @@
-# pubkeyd_ssh_authorized_keys
+# pubkeyd_ssh_authorized_keys [![Build Status](https://travis-ci.org/fatz/pubkeyd_ssh_authorized_keys.svg?branch=master)](https://travis-ci.org/fatz/pubkeyd_ssh_authorized_keys)
 A tiny tool requesting a users authorized_keys via HTTP to be used in `sshd_config`. It could be used with [pugkeyd](/lloesche/pubkeyd) or directly against github.com
 
 ## SSHD config

@@ -1,5 +1,7 @@
 language: go
 go:
 - '1.8'
-script:
-  - make test
+jobs:
+  include:
+    - script: make test
+    - script: make test

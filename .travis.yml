@@ -4,7 +4,8 @@ go:
 jobs:
   include:
     - script: make test
-    - script: make test
+    - stage: Build
+      script: make build
     - stage: GitHub Release
       deploy:
         provider: releases

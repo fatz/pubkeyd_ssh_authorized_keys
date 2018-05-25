@@ -8,12 +8,16 @@ jobs:
       script: make build
     - stage: GitHub Release
       deploy:
+        script: make checksum
         provider: releases
         api_key: $GITHUB_OAUTH_TOKEN
         file:
           - out/pubkeyd_ssh_authorized_keys-darwin
+          - out/pubkeyd_ssh_authorized_keys-darwin.sha256
           - out/pubkeyd_ssh_authorized_keys-linux
+          - out/pubkeyd_ssh_authorized_keys-linux.sha256
           - out/pubkeyd_ssh_authorized_keys.exe
+          - out/pubkeyd_ssh_authorized_keys.exe.sha256
         skip_cleanup: true
         on:
           tags: true

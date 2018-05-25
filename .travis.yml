@@ -5,3 +5,14 @@ jobs:
   include:
     - script: make test
     - script: make test
+    - stage: GitHub Release
+      deploy:
+        provider: releases
+        api_key: $GITHUB_OAUTH_TOKEN
+        file:
+          - pubkeyd_ssh_authorized_keys-darwin
+          - pubkeyd_ssh_authorized_keys-linux
+          - pubkeyd_ssh_authorized_keys.exe
+        skip_cleanup: true
+        on:
+          tags: true
